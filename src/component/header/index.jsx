@@ -6,13 +6,13 @@ import { User, Power, Favorite, Github, Menu } from 'grommet-icons';
 
 export default function Header() {
   const navigate = useNavigate();
-  const [menuColor, setMenuColor] = useState('#c0886a');
+  const [menuColor, setMenuColor] = useState('#f8f7f2');
 
   addEventListener('resize', () => {
     if (window.screen.width > 738) {
       setMenuColor('#f8f7f2'); 
     } else {
-      setMenuColor('#c0886a'); 
+      setMenuColor('#c0886a');
     }
   }); 
 
