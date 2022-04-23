@@ -1,10 +1,10 @@
+import Header from '../../molecules/header';
 
-function Homepage() {
+export default function Homepage() {
   return (
-    <div>Repoprovas
-
-    </div>
+    <>
+      <Header/>
+    </>
   );
 }
 
-export { Homepage };
