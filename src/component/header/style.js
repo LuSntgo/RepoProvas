@@ -80,9 +80,9 @@ export const AccountIcon = styled(Box)`
 `;
 
 export const Account = styled(Menu)`
-  color: #f8f7f2;
-  @media (max-width: 538px) {
-    color: #c0886a !important;
+  background-color: #c0886a;
+  @media (max-width: 738px) {
+    background-color: #c0886a;
   }
 `;
 

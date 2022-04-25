@@ -10,8 +10,6 @@ export default function Header() {
   const { logoff } = useAuth();
   const [menuColor, setMenuColor] = useState('#f8f7f2');
 
-  console.log(logoff);
-
   addEventListener('resize', () => {
     if (window.screen.width > 738) {
       setMenuColor('#f8f7f2'); 
@@ -22,7 +20,7 @@ export default function Header() {
 
   function logout() {
     logoff();
-    navigate('/home');
+    navigate('/');
   }
 
   return (
@@ -33,8 +31,8 @@ export default function Header() {
             icon={<Menu color={menuColor}/>}
             dropBackground='#c0886a'
             items={[
-              { label: 'Home', color: 'white', icon: <User color= '#f8f7f2'/>, gap: 'small', onClick: () => {logout();} },
-              { label: 'Logout', color: 'white', icon: <Power color= '#f8f7f2'/>, reverse: true, gap: 'small', onClick: () => {navigate('/');} },
+              { label: 'Home', color: 'white', icon: <User color= '#f8f7f2'/>, gap: 'small', onClick: () => {navigate('/home');} },
+              { label: 'Logout', color: 'white', icon: <Power color= '#f8f7f2'/>, reverse: true, gap: 'small', onClick: () =>  {logout();} },
             ]}
           > 
           </S.Account>
