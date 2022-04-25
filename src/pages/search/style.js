@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Box, Image } from 'grommet';
+import { Box, Image, Menu } from 'grommet';
 
 export const Container = styled(Box)`
   width: 100vw;
@@ -40,6 +40,27 @@ export const LeftBox = styled(Box)`
     display: none;
   }
 `;
+export const SelectBox = styled(Box)`
+  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+
+`;
+export const SelectMenu = styled(Menu)`
+  height: auto;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+
+`;
+
 export const RightBox = styled(Box)`
   width: 51.8%;
   height: auto;

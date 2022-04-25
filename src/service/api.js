@@ -19,3 +19,14 @@ export async function signIn(data) {
   return token;
 }
 
+export async function getAllDisciplines(token) {
+  const config = createConfig(token);
+  const data = await axios.get(`${BASE_URL}/exams`, config);
+  return data;
+}
+
+export async function getAllTeachers(token) {
+  const config = createConfig(token);
+  const data = await axios.get(`${BASE_URL}/teachers`, config);
+  return data;
+}
