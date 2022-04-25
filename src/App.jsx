@@ -5,6 +5,7 @@ import { theme } from './styles/theme';
 import SignIn from './pages/signIn';
 import Homepage from './pages/homepage';
 import SignUp from './pages/signUp';
+import Search from './pages/search';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/" element={<SignIn />} />
             <Route path="/home" element={<Homepage />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
         </BrowserRouter>
       </Grommet>

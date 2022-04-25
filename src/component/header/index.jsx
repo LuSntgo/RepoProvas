@@ -1,22 +1,12 @@
 import * as S from './style';
-import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import RepoProvas from './assets/repoProvas.svg';
-import { User, Power, Favorite, Github, Menu } from 'grommet-icons';
+import { User, Power, Favorite, Github } from 'grommet-icons';
 import useAuth from '../../hooks/useAuth';
 
 export default function Header() {
   const navigate = useNavigate();
   const { logoff } = useAuth();
-  const [menuColor, setMenuColor] = useState('#f8f7f2');
-
-  addEventListener('resize', () => {
-    if (window.screen.width > 738) {
-      setMenuColor('#f8f7f2'); 
-    } else {
-      setMenuColor('#c0886a');
-    }
-  }); 
 
   function logout() {
     logoff();
@@ -28,7 +18,7 @@ export default function Header() {
       <S.Header>
         <S.AccountIcon>
           <S.Account
-            icon={<Menu color={menuColor}/>}
+            icon={<S.IconMenu />}
             dropBackground='#c0886a'
             items={[
               { label: 'Home', color: 'white', icon: <User color= '#f8f7f2'/>, gap: 'small', onClick: () => {navigate('/home');} },

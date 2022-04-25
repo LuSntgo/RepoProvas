@@ -1,4 +1,5 @@
 import { Heading, Image, Box, Menu } from 'grommet';
+import { Menu as MenuIcon } from 'grommet-icons';
 import styled from 'styled-components';
 
 export const Header = styled(Heading)`
@@ -38,7 +39,7 @@ export const Img = styled(Image)`
   @media (max-width: 738px) {
     height: 55%;
     width: 55%;
-    padding-right: 30px;
+    padding-right: 65px;
   }
   @media (max-width: 608px) {
     height: 60%;
@@ -80,9 +81,14 @@ export const AccountIcon = styled(Box)`
 `;
 
 export const Account = styled(Menu)`
-  background-color: #c0886a;
-  @media (max-width: 738px) {
-    background-color: #c0886a;
+color: #c0886a;
+`;
+
+export const IconMenu = styled(MenuIcon)`
+  stroke: #f8f7f2;
+@media (max-width: 738px) {
+
+  stroke: #c0886a;
   }
 `;
 
@@ -123,7 +129,7 @@ export const LogoClean = styled(Image)`
   @media (max-width: 738px) {
     height: 85%;
     width: 85%;
-    padding-right: 30px;
+    padding-right: 65px;
   }
 
   @media (max-width: 438px) {
