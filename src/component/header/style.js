@@ -85,3 +85,50 @@ export const Account = styled(Menu)`
     color: #c0886a !important;
   }
 `;
+
+export const HeaderClean = styled(Box)`
+  width: 100vw;
+  background: rgb(192, 136, 106);
+  background: linear-gradient(
+    90deg,
+    rgba(192, 136, 106, 1) 0%,
+    rgba(192, 136, 106, 1) 50.1%,
+    rgba(248, 247, 242, 1) 50.1%,
+    rgba(248, 247, 242, 1) 100%
+  );
+  margin: 0;
+
+  @media (max-width: 738px) {
+    background: #c0886a;
+  }
+`;
+
+export const Content = styled(Heading)`
+  height: 80px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content: center;
+
+  @media (max-width: 738px) {
+    background: #f8f7f2;
+  }
+`;
+
+export const LogoClean = styled(Image)`
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 738px) {
+    height: 85%;
+    width: 85%;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 438px) {
+    height: 85%;
+    width: 85%;
+    padding-right: 40px;
+  }
+`;
