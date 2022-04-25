@@ -1,16 +1,12 @@
-import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-import { ThreeDots } from 'react-loader-spinner';
+import { Box, Spinner } from 'grommet';
 
-const Loading = () => {
+function Loading() {
   return (
-    <>
-      <ThreeDots
-        type="ThreeDots"
-        color="#883100"
-        arialLabel="loading-indicator"
-        width={60}
-      />
-    </>
+
+    <Box align="center" direction="row" gap="small" pad="small" >
+      <Spinner color='#883100' />
+    </Box>
   );
-};
+}
+
 export default Loading;
