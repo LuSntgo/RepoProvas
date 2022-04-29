@@ -1,10 +1,15 @@
 {
+  "plugins": ["cypress", "react"],
+  "extends": [
+    "plugin:cypress/recommended",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "env": {
     "browser": true,
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -12,7 +17,6 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react"],
   "rules": {
     "no-unused-vars": [
       "warn",
@@ -21,6 +25,7 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
+    "jest/expect-expect": "off",
     "indent": ["error", 2],
     "linebreak-style": 0,
     "quotes": ["error", "single"],

@@ -23,6 +23,7 @@ export default function SignIn() {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    console.log(formData);
     setIsLoading(true);
 
     if (formData.email === '' || formData.password === '') {
@@ -31,14 +32,20 @@ export default function SignIn() {
         message: 'Ops! Os campos não podem ficar em branco',
       });
     }
-    if (formData.password !== formData.confirmPassword) {
+    const { email, password, confirmPassword } = formData;
+
+    if (password !== confirmPassword) {
       showToast({
         type: 'error',
         message: 'As senhas precisam ser iguais, digite novamente.',
       });
     }
     try {
-      await api.createUser({ ...formData });
+      await api.createUser({ email, password  });
+      showToast({
+        type: 'success',
+        message: 'Cadastrado efetuado com sucesso!',
+      });
       setIsLoading(false);
       navigate('/');
     } catch (error) {
@@ -77,6 +84,7 @@ export default function SignIn() {
                   <S.formField
                     label="Email"
                     name="email"
+                    id="email"
                     onChange={handleChange}
                     disabled={isLoading}
                     value={formData.email}

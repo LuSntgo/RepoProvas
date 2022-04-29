@@ -10,7 +10,7 @@ export default function SearchTeachers() {
   const [items, setItems] = useState([]);
 
   async function getTeachers() {
-    const response = await api.getAllTeachers(auth.data);
+    const response = await api.getTestsByTeacher(auth.data);
     setItems(response.data);
     console.log(items);
   }

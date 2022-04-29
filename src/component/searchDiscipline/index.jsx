@@ -10,7 +10,7 @@ export default function SearchDiscipline() {
   const [items, setItems] = useState([]);
 
   async function getTests() {
-    const response = await api.getAllDisciplines(auth.data);
+    const response = await api.getTestsByDiscipline(auth.data);
     setItems(response.data);
     console.log(items);
   }

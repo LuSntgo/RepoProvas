@@ -77,6 +77,7 @@ export default function SignIn() {
                 <Form onSubmit={handleSubmit}>
                   <S.formField
                     label="Email"
+                    id="email"
                     name="email"
                     onChange={handleChange}
                     disabled={isLoading}

@@ -19,14 +19,20 @@ export async function signIn(data) {
   return token;
 }
 
-export async function getAllDisciplines(token) {
+export async function getTestsByDiscipline(token) {
   const config = createConfig(token);
-  const data = await axios.get(`${BASE_URL}/exams`, config);
+  const data = await axios.get(`${BASE_URL}/tests?groupBy=disciplines`, config);
   return data;
 }
 
-export async function getAllTeachers(token) {
+export async function getTestsByTeacher(token) {
   const config = createConfig(token);
-  const data = await axios.get(`${BASE_URL}/teachers`, config);
+  const data = await axios.get(`${BASE_URL}/tests?groupBy=teachers`, config);
+  return data;
+}
+
+export async function getCategories(token) {
+  const config = createConfig(token);
+  const data = await axios.get(`${BASE_URL}/categories`, config);
   return data;
 }
