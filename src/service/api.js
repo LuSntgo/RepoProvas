@@ -7,6 +7,7 @@ function createConfig(token) {
     headers: {
       Authorization: `Bearer ${token}`,
     },
+    
   };
 }
 

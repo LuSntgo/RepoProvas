@@ -28,7 +28,7 @@ export default function Search() {
           </S.LeftBox>
 
           <S.RightBox>
-            <SearchTeachers/>
+            {/* <SearchTeachers/> */}
           </S.RightBox>
         </S.Content>
       </S.Container>
